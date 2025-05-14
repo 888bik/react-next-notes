@@ -3,8 +3,8 @@ import SidebarNoteItem from "@/components/SidebarNoteItem";
 import { getAllNotes } from "@/lib/redis";
 
 export default async function NoteList() {
-  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-  await sleep(10000);
+  // const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  // await sleep(10000);
   const notes = await getAllNotes();
 
   const arr = Object.entries(notes);
@@ -16,7 +16,7 @@ export default async function NoteList() {
   return (
     <ul className="notes-list">
       {arr.map(([noteId, note]) => {
-        const { title, updateTime } = JSON.parse(note);
+        // const { title, updateTime } = JSON.parse(note);
         return (
           <li key={noteId}>
             {/* 封装成每条笔记 */}

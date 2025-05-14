@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { getAllNotes } from "@/lib/redis";
 import SidebarNoteList from "./SidebarNoteList";
 import EditButton from "@/components/EditButton";
 import NoteListSkeleton from "@/components/NoteListSkeleton";
