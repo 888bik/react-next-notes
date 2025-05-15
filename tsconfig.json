@@ -19,9 +19,18 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/actions": ["./src/app/[lng]/actions.js"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/lib/redis.js", "src/components/SidebarNoteList.jsx", "src/components/Sidebar.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/lib/redis.js",
+    "src/components/SidebarNoteList.jsx",
+    "src/components/Sidebar.jsx"
+, "src/app/[lng]/layout.jsx", "src/app/[lng]/note/edit/layout.jsx", "src/app/[lng]/page.jsx"  ],
   "exclude": ["node_modules"]
 }
