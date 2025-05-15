@@ -20,7 +20,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/actions": ["./src/app/[lng]/actions.js"]
+      "@/actions": ["./src/app/[lng]/actions.js"],
+      "@/auth": ["./auth.js"]
     }
   },
   "include": [
@@ -30,7 +31,10 @@
     ".next/types/**/*.ts",
     "src/lib/redis.js",
     "src/components/SidebarNoteList.jsx",
-    "src/components/Sidebar.jsx"
-, "src/app/[lng]/layout.jsx", "src/app/[lng]/note/edit/layout.jsx", "src/app/[lng]/page.jsx"  ],
+    "src/components/Sidebar.jsx",
+    "src/app/[lng]/layout.jsx",
+    "src/app/[lng]/note/edit/layout.jsx",
+    "src/app/[lng]/page.jsx"
+  ],
   "exclude": ["node_modules"]
 }

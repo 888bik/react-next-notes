@@ -14,8 +14,7 @@ function getLocale(request) {
 
   return match(languages, locales, defaultLocale);
 }
-
-export function middleware(request) {
+export async function middleware(request) {
   const { pathname } = request.nextUrl;
   // 判断请求路径中是否已存在语言，已存在语言则跳过
   const pathnameHasLocale = locales.some(
