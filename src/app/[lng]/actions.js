@@ -10,8 +10,6 @@ const schema = z.object({
   content: z.string().min(1, "请填写内容").max(100, "字数最多 100"),
 });
 
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
 export async function saveNote(prevState, formData) {
   // 获取 noteId
   const noteId = formData.get("noteId");
@@ -46,7 +44,7 @@ export async function saveNote(prevState, formData) {
 
 export async function deleteNote(prevState, formData) {
   const noteId = formData.get("noteId");
-  delNote(noteId);
+  await delNote(noteId);
   revalidatePath("/", "layout");
   redirect("/");
 }
